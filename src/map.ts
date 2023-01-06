@@ -13,7 +13,9 @@ type Package =
   | 'ufo'
   | 'consola';
 
-export default <Record<Package, (string | [string, Partial<Import>])[]>>{
+type ExportType<T extends string = string> = T | [T, Partial<Import>]; // & T extends 'default' ? Pick<Import, 'as'> : {}
+
+export default <Record<Package, ExportType[]>>{
   // unkit
   'std-env': [
     'hasTTY',

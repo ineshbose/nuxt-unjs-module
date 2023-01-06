@@ -14,6 +14,9 @@
   "files": [
     "dist"
   ],
+  "build": {
+    "externals": ["unimport"]
+  },
   "scripts": {
     "prepack": "nuxt-module-build",
     "dev": "nuxi dev playground",
