@@ -1,6 +1,11 @@
 {
   "name": "nuxt-unjs",
-  "version": "1.0.0",
+  "version": "1.0.1",
+  "description": "UnJS utilities for Nuxt",
+  "keywords": ["nuxt", "nuxt-module", "unjs"],
+  "homepage": "https://github.com/ineshbose/nuxt-unjs-module#readme",
+  "bugs": "https://github.com/ineshbose/nuxt-unjs-module/issues",
+  "repository": "github:ineshbose/nuxt-unjs-module",
   "license": "MIT",
   "type": "module",
   "exports": {
@@ -15,7 +20,10 @@
     "dist"
   ],
   "build": {
-    "externals": ["unimport"]
+    "externals": [
+      "unimport",
+      "scule"
+    ]
   },
   "scripts": {
     "prepack": "nuxt-module-build",
@@ -24,18 +32,7 @@
     "dev:prepare": "nuxt-module-build --stub && nuxi prepare playground"
   },
   "dependencies": {
-    "@nuxt/kit": "^3.0.0",
-    "consola": "^2.15.3",
-    "defu": "^6.1.1",
-    "destr": "^1.2.2",
-    "h3": "^1.0.2",
-    "is-https": "^4.0.0",
-    "items-promise": "^1.0.0",
-    "mlly": "^1.0.0",
-    "ofetch": "^1.0.0",
-    "scule": "^1.0.0",
-    "std-env": "^3.3.1",
-    "ufo": "^1.0.1"
+    "@nuxt/kit": "^3.0.0"
   },
   "devDependencies": {
     "@nuxt/module-builder": "^0.2.1",
